@@ -15,7 +15,7 @@ router.post("/", verifyToken, async (req, res)  =>{
     removeSpace(req.body)
     
     const newOrder =  new Order(req.body);
-    //console.log(req.body);
+    console.log(req.body);
     try {
         const saveOrder = await newOrder.save();
         res.status(200).json(saveOrder); 
@@ -58,7 +58,7 @@ router.delete("/:id", verifyTokenAndAutorization, async (req, res)  =>{
 })
 
 
-// GET UISER ORDER
+// GET USER ORDER
 
 router.get("/find/:userId", verifyTokenAndAutorization, async (req, res) => {
     try {
