@@ -13,7 +13,7 @@ const mongoose = require('mongoose')
             default:1,
         }
     }
-    ],
+    ]
     
 },
 {timestamps:true, versionKey: false}
